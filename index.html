@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="sass/main.css">
+  <!-- for production, change to: -->
+  <!-- <link rel="stylesheet" href="css/style_comp.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Job Listings</title>
+</head>
+
+<body>
+  <div class="header-bg">
+    &nbsp;
+  </div>
+
+  <div class="content">
+    <div class="filter">
+      <div class="filter__clear" onclick="emptyFilterList()">
+        Clear
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="senior" data-languages="html css javascript">
+      <img src="./images/photosnap.svg" alt="Photosnap" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Photosnap</div>
+          <div class="item__company--new">New!</div>
+          <div class="item__company--featured">Featured</div>
+        </div>
+        <h2 class="item__jobtitle">Senior Frontend Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">1d ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">USA only</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Senior')">Senior</div>
+        <div class="item__filters--languages" onclick="getDataSet('HTML')">HTML</div>
+        <div class="item__filters--languages" onclick="getDataSet('CSS')">CSS</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="python" data-tools="react">
+      <img src="./images/manage.svg" alt="Manage" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Manage</div>
+          <div class="item__company--new">New!</div>
+          <div class="item__company--featured">Featured</div>
+        </div>
+        <h2 class="item__jobtitle">Fullstack Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">1d ago</div>
+          <div class="item__infos--extend">Part Time</div>
+          <div class="item__infos--location">Remote</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="getDataSet('Python')">Python</div>
+        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="react sass">
+      <img src="./images/account.svg" alt="Account" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Account</div>
+          <div class="item__company--new">New!</div>
+        </div>
+        <h2 class="item__jobtitle">Junior Frontend Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">2d ago</div>
+          <div class="item__infos--extend">Part Time</div>
+          <div class="item__infos--location">USA only</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
+        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="junior" data-languages="css javascript">
+      <img src="./images/myhome.svg" alt="MyHome" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Account</div>
+          <div class="item__company--new">New!</div>
+        </div>
+        <h2 class="item__jobtitle">Junior Frontend Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">5d ago</div>
+          <div class="item__infos--extend">Contract</div>
+          <div class="item__infos--location">USA only</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('CSS')">CSS</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="javascript ruby" data-tools="sass">
+      <img src="./images/loop-studios.svg" alt="Loop Studios" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Loop Studios</div>
+        </div>
+        <h2 class="item__jobtitle">Software Engineer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">1w ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">Worldwide</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--languages" onclick="getDataSet('Ruby')">Ruby</div>
+        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="backend" data-level="junior" data-languages="ruby" data-tools="ror">
+      <img src="./images/faceit.svg" alt="FaceIt" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">FaceIt</div>
+        </div>
+        <h2 class="item__jobtitle">Junior Backend Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">2w ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">UK only</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Backend')">Backend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('Ruby')">Ruby</div>
+        <div class="item__filters--tools" onclick="getDataSet('RoR')">RoR</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="junior" data-languages="html javascript" data-tools="sass">
+      <img src="./images/shortly.svg" alt="Shortly" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Shortly</div>
+        </div>
+        <h2 class="item__jobtitle">Junior Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">2w ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">Worldwide</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('HTML')">HTML</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="vue sass">
+      <img src="./images/insure.svg" alt="Insure" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Insure</div>
+        </div>
+        <h2 class="item__jobtitle">Junior Frontend Developer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">2w ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">USA only</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="getDataSet('Vue')">Vue</div>
+        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="fullstack" data-level="midweight" data-languages="javascript python" data-tools="django">
+      <img src="./images/eyecam-co.svg" alt="Eyecam Co." class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">Eyecam Co.</div>
+        </div>
+        <h2 class="item__jobtitle">Full Stack Engineer</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">3w ago</div>
+          <div class="item__infos--extend">Full Time</div>
+          <div class="item__infos--location">Worldwide</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--languages" onclick="getDataSet('Python')">Python</div>
+        <div class="item__filters--tools" onclick="getDataSet('Django')">Django</div>
+      </div>
+    </div>
+
+    <div class="item" data-role="frontend" data-level="junior" data-languages="javascript" data-tools="react sass">
+      <img src="./images/the-air-filter-company.svg" alt="The Air Filter Company" class="item__img">
+      <div class="item__content">
+        <div class="item__company">
+          <div class="item__company--title">The Air Filter Company</div>
+        </div>
+        <h2 class="item__jobtitle">Front-end Dev</h2>
+        <div class="item__infos">
+          <div class="item__infos--time">1mo ago</div>
+          <div class="item__infos--extend">Part Time</div>
+          <div class="item__infos--location">Worldwide</div>
+        </div>
+      </div>
+      <div class="item__filters">
+        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
+        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/sirtralala" target="_blank">Thomas Doerflinger</a>.
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

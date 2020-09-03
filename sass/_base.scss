@@ -1,0 +1,38 @@
+// PRIMARY COLORS
+
+$desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+
+// NEUTRAL COLORS
+
+$light-grayish-cyan-bg: hsl(180, 52%, 96%);
+$light-grayish-cyan-filter: hsl(180, 31%, 95%);
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+
+// TYPOGRAPHY
+
+$font-size-default: 93.75%;
+$font-family-default: 'Spartan', sans-serif;
+
+
+// MIXINS
+
+@mixin label ($bg-color) {
+    height: 1.5rem;
+    padding: .4rem;
+    margin-left: .5rem;
+    color: $light-grayish-cyan-filter;
+    background-color: $bg-color;
+    font-size: 80%;
+    text-transform: uppercase;
+    border-radius: 1rem;
+}
+
+@mixin dot ($left) {
+    content: "\2022";
+    position: absolute;
+    top: 0;
+    left: $left;
+}

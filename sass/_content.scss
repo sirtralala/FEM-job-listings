@@ -1,0 +1,107 @@
+.content {
+    margin: 4rem 8rem 0 8rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: .2rem .5rem 1rem hsl(180, 29%, 80%), -.2rem .5rem 1rem hsl(180, 29%, 80%);
+
+    &__img {
+        flex-basis: 5%;
+        width: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 20%;
+        min-width: 20vw;
+        margin-left: 2vw;
+    }
+
+    &__company {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+
+        &--title {
+            margin-right: .5rem;
+        }
+
+        &--new {
+            @include label ($desaturated-dark-cyan);
+        }
+
+        &--featured {
+            @include label ($very-dark-grayish-cyan);
+        }
+    }
+
+    &__jobtitle {
+        color: $very-dark-grayish-cyan;
+        font-size: 120%;
+        white-space: nowrap;
+        transition: all .2s ease-out;
+
+        &:hover {
+            color: $desaturated-dark-cyan;
+            cursor: pointer;
+        }
+    }
+
+    &__infos {
+        display: flex;
+        justify-content: space-between;
+        color: $dark-grayish-cyan;
+     
+        &--time {
+            position: relative;
+
+            &::after {
+                @include dot (125%);
+            }
+        }
+
+        &--extend {
+            position: relative;
+
+            &::after {
+                @include dot (120%);
+            }
+        }
+
+        &--location {
+
+        }
+    }
+
+    &__filters {
+        display: flex;
+        align-self: center;
+        margin-left: auto;
+        font-weight: 700;
+
+        &--role,
+        &--level,
+        &--languages,
+        &--tools {
+            padding: .4rem;
+            background-color: $light-grayish-cyan-filter;
+            border-radius: .3rem;
+            margin-left: .5rem;
+            transition: all .2s ease-out;
+
+            &:hover {
+                color: $light-grayish-cyan-filter;
+                background-color: $desaturated-dark-cyan;
+                cursor: pointer;
+            }
+        }
+    }
+}
