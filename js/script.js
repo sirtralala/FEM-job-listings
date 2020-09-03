@@ -1,12 +1,12 @@
 var filterList = [];
 
 displayFilterInFilterBar = filter => {
-    let filterBar = document.querySelector('.filter__clear');
-    let html = `<div class="filter__label" id="${filter}">
-                    <div class="filter__label--text">${filter}</div>
-                    <img src="./images/icon-remove.svg" alt="remove" class="filter__label--remove" onclick="removeFilter('${filter}')">
+    let filterBar = document.querySelector('.filter__labels');
+    let html = `<div class="filter__labels--label" id="${filter}">
+                    <div class="filter__labels--label-text">${filter}</div>
+                    <img src="./images/icon-remove.svg" alt="remove" class="filter__labels--label-remove" onclick="removeFilter('${filter}')">
                 </div>`;
-    filterBar.insertAdjacentHTML('beforebegin', html); 
+    filterBar.insertAdjacentHTML('afterbegin', html); 
 }
 
 addFilterToList = filter => {
@@ -47,7 +47,7 @@ displayResult = filter => {
     });
 }
 
-getDataSet = filter => {
+addFilter = filter => {
     addFilterToList(filter);
     toggleFilterBar();
     displayResult(filter);
@@ -62,7 +62,8 @@ displayAllItems = () => {
 
 emptyFilterList = () => {
     filterList = [];
-    document.querySelector('.filter').innerHTML = '<div class="filter__clear" onclick="emptyFilterList()">Clear</div>';
+    document.querySelector('.filter').innerHTML = `<div class="filter__labels">&nbsp;</div>
+                                                   <div class="filter__clear" onclick="emptyFilterList()">Clear</div>`;
     toggleFilterBar();
     displayAllItems();
 }

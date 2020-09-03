@@ -30,9 +30,21 @@ $font-family-default: 'Spartan', sans-serif;
     border-radius: 1rem;
 }
 
-@mixin dot ($left) {
+@mixin dot {
     content: "\2022";
     position: absolute;
     top: 0;
-    left: $left;
+    left: 115%;
+
+    @media only screen and (max-width: 1100px) {
+        left: 110%;  
+    }
+
+    @media only screen and (max-width: 500px) {
+        left: 115%;  
+    }
+
+    @media only screen and (max-width: 375px) {
+        left: 110%;  
+    }
 }

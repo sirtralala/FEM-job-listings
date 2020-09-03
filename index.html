@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="sass/main.css">
@@ -20,9 +20,8 @@
 
   <div class="content">
     <div class="filter">
-      <div class="filter__clear" onclick="emptyFilterList()">
-        Clear
-      </div>
+      <div class="filter__labels">&nbsp;</div>
+      <div class="filter__clear" onclick="emptyFilterList()">Clear</div>
     </div>
 
     <div class="item" data-role="frontend" data-level="senior" data-languages="html css javascript">
@@ -41,11 +40,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Senior')">Senior</div>
-        <div class="item__filters--languages" onclick="getDataSet('HTML')">HTML</div>
-        <div class="item__filters--languages" onclick="getDataSet('CSS')">CSS</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Senior')">Senior</div>
+        <div class="item__filters--languages" onclick="addFilter('HTML')">HTML</div>
+        <div class="item__filters--languages" onclick="addFilter('CSS')">CSS</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
       </div>
     </div>
 
@@ -65,10 +64,10 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
-        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
-        <div class="item__filters--languages" onclick="getDataSet('Python')">Python</div>
-        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
+        <div class="item__filters--role" onclick="addFilter('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="addFilter('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="addFilter('Python')">Python</div>
+        <div class="item__filters--tools" onclick="addFilter('React')">React</div>
       </div>
     </div>
 
@@ -87,11 +86,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
-        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="addFilter('React')">React</div>
+        <div class="item__filters--tools" onclick="addFilter('Sass')">Sass</div>
       </div>
     </div>
 
@@ -110,10 +109,10 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('CSS')">CSS</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('CSS')">CSS</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
       </div>
     </div>
 
@@ -131,11 +130,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
-        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--languages" onclick="getDataSet('Ruby')">Ruby</div>
-        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+        <div class="item__filters--role" onclick="addFilter('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="addFilter('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--languages" onclick="addFilter('Ruby')">Ruby</div>
+        <div class="item__filters--tools" onclick="addFilter('Sass')">Sass</div>
       </div>
     </div>
 
@@ -153,10 +152,10 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Backend')">Backend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('Ruby')">Ruby</div>
-        <div class="item__filters--tools" onclick="getDataSet('RoR')">RoR</div>
+        <div class="item__filters--role" onclick="addFilter('Backend')">Backend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('Ruby')">Ruby</div>
+        <div class="item__filters--tools" onclick="addFilter('RoR')">RoR</div>
       </div>
     </div>
 
@@ -174,11 +173,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('HTML')">HTML</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('HTML')">HTML</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="addFilter('Sass')">Sass</div>
       </div>
     </div>
 
@@ -196,11 +195,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--tools" onclick="getDataSet('Vue')">Vue</div>
-        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="addFilter('Vue')">Vue</div>
+        <div class="item__filters--tools" onclick="addFilter('Sass')">Sass</div>
       </div>
     </div>
 
@@ -218,11 +217,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Fullstack')">Fullstack</div>
-        <div class="item__filters--level" onclick="getDataSet('Midweight')">Midweight</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--languages" onclick="getDataSet('Python')">Python</div>
-        <div class="item__filters--tools" onclick="getDataSet('Django')">Django</div>
+        <div class="item__filters--role" onclick="addFilter('Fullstack')">Fullstack</div>
+        <div class="item__filters--level" onclick="addFilter('Midweight')">Midweight</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--languages" onclick="addFilter('Python')">Python</div>
+        <div class="item__filters--tools" onclick="addFilter('Django')">Django</div>
       </div>
     </div>
 
@@ -240,11 +239,11 @@
         </div>
       </div>
       <div class="item__filters">
-        <div class="item__filters--role" onclick="getDataSet('Frontend')">Frontend</div>
-        <div class="item__filters--level" onclick="getDataSet('Junior')">Junior</div>
-        <div class="item__filters--languages" onclick="getDataSet('JavaScript')">JavaScript</div>
-        <div class="item__filters--tools" onclick="getDataSet('React')">React</div>
-        <div class="item__filters--tools" onclick="getDataSet('Sass')">Sass</div>
+        <div class="item__filters--role" onclick="addFilter('Frontend')">Frontend</div>
+        <div class="item__filters--level" onclick="addFilter('Junior')">Junior</div>
+        <div class="item__filters--languages" onclick="addFilter('JavaScript')">JavaScript</div>
+        <div class="item__filters--tools" onclick="addFilter('React')">React</div>
+        <div class="item__filters--tools" onclick="addFilter('Sass')">Sass</div>
       </div>
     </div>
   </div>
