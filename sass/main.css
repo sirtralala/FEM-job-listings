@@ -194,6 +194,10 @@ body {
   }
 }
 
+.item__featured {
+  border-left: 0.5rem solid #5ba4a4;
+}
+
 .item__img {
   -ms-flex-preferred-size: 5%;
       flex-basis: 5%;

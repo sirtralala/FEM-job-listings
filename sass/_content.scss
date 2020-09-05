@@ -34,6 +34,10 @@
         position: relative;
     }
 
+    &__featured {
+        border-left: .5rem solid $desaturated-dark-cyan;
+    }
+
     &__img {
         flex-basis: 5%;
         width: auto;

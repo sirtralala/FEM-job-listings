@@ -117,6 +117,8 @@ body {
       padding: 2rem 2rem .5rem 2rem;
       margin-bottom: 3rem;
       position: relative; } }
+  .item__featured {
+    border-left: 0.5rem solid #5ba4a4; }
   .item__img {
     flex-basis: 5%;
     width: auto; }
