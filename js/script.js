@@ -7,7 +7,7 @@ displayFilterInFilterBar = filter => {
                     <div class="filter__labels--label-text">${filter}</div>
                     <img src="./images/icon-remove.svg" alt="remove" class="filter__labels--label-remove" onclick="removeFilter('${filter}')">
                 </div>`;
-    filterBar.insertAdjacentHTML('afterbegin', html); 
+    filterBar.insertAdjacentHTML('beforeend', html); 
 }
 
 addFilterToList = filter => {
